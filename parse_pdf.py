@@ -83,20 +83,21 @@ def parse_pdf(pdf_path, save_dir):
                 
                 if width >500 and height>500:
                     image_name=f'img{page_idx}-{img_idx}'+'.png'
-                    img.save(os.path.join(save_dir,image_name),format='png')
-                    lines_text+='|'+image_name+'|'
+                    image_path=os.path.join(save_dir,'images',image_name)
+                    img.save(image_path,format='png')
+                    lines_text+='![]('+os.path.join('images',image_name)+')'
                     img_idx+=1
 
     with open(f'{save_dir}/doc{save_page_idx}-{doc_idx}.md',encoding='utf-8', mode='w') as fw:
         fw.write(lines_text)
 
 if __name__ == "__main__":
-    pdf_path = "data\data.pdf"
-    save_dir = "preprocess"
+    pdf_path = "./data/data.pdf"
+    save_dir = "./preprocess"
     
     if os.path.exists(save_dir) and os.path.isdir(save_dir):
         shutil.rmtree(save_dir)
     os.makedirs(save_dir)
-    # os.makedirs(os.path.join(save_dir,'images'))
+    os.makedirs(os.path.join(save_dir,'images'))
 
     parse_pdf(pdf_path, save_dir)
