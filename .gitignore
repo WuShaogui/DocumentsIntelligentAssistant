@@ -1,0 +1,5 @@
+docs/*
+images/*
+preprocess/*
+.vscode/launch.json
+vector_storage/*
