@@ -25,3 +25,7 @@
 - [evaluate_retrievers](2-evaluate_retrievers.ipynb)：构建检索器及其评估过程，确定最终检索器
 - [evaluate_query_engine](3-evaluate_query_engine.ipynb)：构建生成器及其评估过程
 - [RetrieverQueryEngine](RetrieverQueryEngine.ipynb)：经过以上探索，选择合适方式实现文档检索
+
+**效果**
+
+![alt text](doc/2024-12-25_170157.png)
