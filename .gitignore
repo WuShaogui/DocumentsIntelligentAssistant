@@ -3,3 +3,5 @@ images/*
 preprocess/*
 .vscode/launch.json
 vector_storage/*
+Storage/*
+.ipynb_checkpoints/*
